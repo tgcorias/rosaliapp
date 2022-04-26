@@ -12,7 +12,9 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+h1{
+  color: #fff
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -39,7 +41,7 @@ button:hover{
   background-color: #a0f379;
   border: 1px solid black;
   color: #282c34;
-  transition: 0.6s;
+  transition: 0.4s;
 }
 input{
   margin: 10px;
@@ -53,8 +55,8 @@ input{
 
 }
 textarea:focus, input:focus{
-  transition: 0.3s;
-  outline: 3px solid black;
+  transition: 0.1s;
+  outline: 3px solid #226d00;
 }
 input::placeholder {
   margin: 5px;
@@ -70,11 +72,14 @@ input::placeholder {
 }
 #rosalia{
   width: 100%;
-  margin: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  
+}
+audio{
+  margin: 5px;
 }
 
 
