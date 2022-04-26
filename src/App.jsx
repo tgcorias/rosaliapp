@@ -50,7 +50,7 @@ function App() {
     <div className="App">
       <br/>
       <h1>Ingresar texto</h1>
-      <h1>¡La Rosalía 🙋🏻‍♀️ lo deletra!🙅🏻</h1>
+      <h1>¡La Rosalía 🙋🏻‍♀️ lo deletra! 🙅🏻‍♀️</h1>
       <br/>
       <br/>
       <input 
