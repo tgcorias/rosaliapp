@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Form from 'react-bootstrap/Form'
 import Crunker from 'crunker'
 import './App.css'
 import ReactAudioPlayer from 'react-audio-player';
@@ -47,12 +48,17 @@ function App() {
 
   return (
     <div className="App">
-
+      <br/>
       <h1>Ingresar texto</h1>
+      <h1>¡La Rosalía 🙋🏻‍♀️ lo deletra!🙅🏻</h1>
       <br/>
       <br/>
-      <br/>
-      <input onChange={changeHandler} value={userInput}></input>
+      <input 
+        onChange={changeHandler} 
+        value={userInput}
+        type="text"
+        placeholder="Ingresar palabra"
+      />
 
 
       <button 
@@ -72,7 +78,6 @@ function App() {
                 throw new Error(error);
               });
       }}> OK </button> 
-      
 
       <div className="container">
         <div id="rosalia" /> 
