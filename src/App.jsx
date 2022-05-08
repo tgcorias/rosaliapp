@@ -22,6 +22,7 @@ const dictionary = {
   'l': '../Abc/L.mp3',
   'm': '../Abc/M.mp3',
   'n': '../Abc/N.mp3',
+  'ñ': '../Abc/N.mp3',
   'o': '../Abc/O.mp3',
   'p': '../Abc/P.mp3',
   'q': '../Abc/Q.mp3',
