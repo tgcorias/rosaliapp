@@ -44,9 +44,6 @@ function App() {
         setUserInput(e.target.value);
     }
 
-    useEffect(()=> {
-    },[userInput])
-
   return (
     <div className="App">
       <br/>
