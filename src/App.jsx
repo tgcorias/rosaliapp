@@ -1,11 +1,8 @@
-import { useState, useEffect } from 'react'
-import Form from 'react-bootstrap/Form'
+import { useState } from 'react'
 import Crunker from 'crunker'
 import './App.css'
-import ReactAudioPlayer from 'react-audio-player';
 
-
-let crunker  = new Crunker()
+let crunker = new Crunker()
 
 const dictionary = {
   'a': '../Abc/A.mp3',
@@ -40,45 +37,47 @@ const dictionary = {
 function App() {
   const [userInput, setUserInput] = useState('');
 
-    const changeHandler = (e) => {
-        setUserInput(e.target.value);
-    }
+  const changeHandler = (e) => {
+    setUserInput(e.target.value);
+  }
 
   return (
     <div className="App">
-      <br/>
+      <br />
       <h1>Ingresar texto</h1>
       <h1>¡La Rosalía 🙋🏻‍♀️ lo deletra! 🙅🏻‍♀️</h1>
-      <br/>
-      <br/>
-      <input 
-        onChange={changeHandler} 
+      <br />
+      <br />
+      <input
+        onChange={changeHandler}
         value={userInput}
         type="text"
         placeholder="Ingresar palabra"
       />
 
-
-      <button 
-      onClick={()=>{
-          let letters = userInput.toLowerCase().split('').map(letter => {
-            return dictionary[letter]
-          })
+      <button
+        onClick={() => {
+          let letters = userInput
+                          .toLowerCase()
+                          .split('')
+                          .map(letter => {
+                            return dictionary[letter]
+                          })
 
           crunker
-              .fetchAudio(...letters)
-              .then((buffers) => crunker.concatAudio(buffers))
-              .then((concat) => crunker.export(concat, 'audio/mp3'))
-              .then((output) => {
-                document.querySelector("#rosalia").append(output.element);
-              })
-              .catch((error) => {
-                throw new Error(error);
-              });
-      }}> OK </button> 
+            .fetchAudio(...letters)
+            .then((buffers) => crunker.concatAudio(buffers))
+            .then((concat) => crunker.export(concat, 'audio/mp3'))
+            .then((output) => {
+              document.querySelector("#rosalia").append(output.element);
+            })
+            .catch((error) => {
+              throw new Error(error);
+            });
+        }}> OK </button>
 
       <div className="container">
-        <div id="rosalia" /> 
+        <div id="rosalia" />
       </div>
     </div>
   )
